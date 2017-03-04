@@ -160,7 +160,7 @@ class TelegramDriver extends Driver
         $parameters = [
             'chat_id' => $chatId,
             'message_id' => $messageId,
-            'inline_keyboard' => [],
+            'reply_markup' => [],
         ];
 
         return $this->http->post('https://api.telegram.org/bot'.$this->config->get('telegram_token').'/editMessageReplyMarkup', [], $parameters);
